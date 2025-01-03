@@ -1,0 +1,13 @@
+package edu.peters.fsd;
+import com.st.sample.*;
+
+public class C {
+	
+	A aObj= new A();
+	
+	
+	void mC() {
+		System.out.println("from class...C......k....."+aObj);
+	}
+
+}

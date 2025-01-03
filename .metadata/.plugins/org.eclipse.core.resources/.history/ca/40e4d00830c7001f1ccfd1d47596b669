@@ -1,0 +1,11 @@
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+     int n=100,d=0;
+     System.out.println(n/d);
+     System.out.println("hello");
+     System.out.println("hyd");
+	}
+
+}

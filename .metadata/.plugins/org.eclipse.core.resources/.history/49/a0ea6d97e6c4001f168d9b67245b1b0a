@@ -1,0 +1,108 @@
+class RBIbank{
+	int balance;
+	void deposit(int amt) {
+		this.balance=this.balance+amt;
+		System.out.println("sucessfully deposited......amount.."+amt);
+	}
+	void withdraw(int amt) {
+		this.balance=this.balance-amt;
+		System.out.println("sucessfully withdrawn......amount.."+amt);
+	}
+	void checkBalance() {
+		System.out.println("from RBI avl balance......."+this.balance);
+	}	
+}
+class SBIBank extends RBIbank{
+	public SBIBank(int balance) {
+	this.balance=balance;
+	}
+	void deposit(int amt) {
+		if(amt <50000) {
+		this.balance=this.balance+amt;
+		System.out.println("sucessfully deposited......amount.."+amt);
+		}else {
+			System.out.println("Day limit excedded");
+		}
+	}
+	void withdraw(int amt) {
+		if(amt<50000) {
+		this.balance=this.balance-amt;
+		System.out.println("sucessfully withdrawn......amount.."+amt);
+	}else {
+		System.out.println("day limit excedded");
+	}
+	}
+	void checkBalance() {
+		System.out.println("from RBI avl balance......."+this.balance);
+}
+	class ICICIBank extends RBIbank{
+		public ICICIBank(int balance) {
+		this.balance=balance;
+		}
+		void deposit(int amt) {
+			if(amt <350000) {
+			this.balance=this.balance+amt;
+			System.out.println("sucessfully deposited......amount.."+amt);
+			}else {
+				System.out.println("Day limit excedded");
+			}
+		}
+		void withdraw(int amt) {
+			if(amt<350000) {
+			this.balance=this.balance-amt;
+			System.out.println("sucessfully withdrawn......amount.."+amt);
+		}else {
+			System.out.println("day limit excedded");
+		}
+		}
+		void checkBalance() {
+			System.out.println("from ICICIBANK avl balance......."+this.balance);
+		   
+	}
+		class HDFCBank extends RBIbank{
+			public HDFCBank(int balance) {
+			this.balance=balance;
+			}
+			void deposit(int amt) {
+				if(amt <500000) {
+				this.balance=this.balance+amt;
+				System.out.println("sucessfully deposited......amount.."+amt);
+				}else {
+					System.out.println("Day limit excedded");
+				}
+			}
+			void withdraw(int amt) {
+				if(amt<500000) {
+				this.balance=this.balance-amt;
+				System.out.println("sucessfully withdrawn......amount.."+amt);
+			}else {
+				System.out.println("day limit excedded");
+			}
+			}
+			void checkBalance() {
+				System.out.println("from HDFC avl balance......."+this.balance); 
+		}
+public class Overriding {
+	public static void main(String[] args) {
+	SBIBank sbi=new SBIBank(10000);
+	ICICIBank icici=new ICICIBank(350000);
+	HDFCBank hdfc=new HDFCBank(500000);
+	System.out.println("for SBI BAnk starts");
+	sbi.checkBalance();
+	sbi.deposit(6000);
+	sbi.checkBalance();
+	sbi.deposit(67000);
+	sbi.checkBalance();
+	System.out.println("for SBI bank ENDS");
+	System.out.println("For ICICI bank Starts");
+	icici.checkBalance();
+	icici.deposit(6000);
+	icici.checkBalance();
+	icici.deposit(67000);
+	icici.checkBalance();
+	System.out.println("for ICICI bank ends");
+	}
+}
+}
+}
+}

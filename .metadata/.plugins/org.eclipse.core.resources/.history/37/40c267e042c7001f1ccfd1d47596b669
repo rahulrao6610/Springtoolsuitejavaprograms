@@ -1,0 +1,7 @@
+//write a prg prime numbers 1-100 every from other prime numbers the diff should be 15
+//wite a prg to check the 2 given arrays equal or not
+public class PrimeNumners {
+public static void main(String[]args) {
+	
+}
+}

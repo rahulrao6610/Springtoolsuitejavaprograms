@@ -1,0 +1,41 @@
+
+public class SBIBank {
+	int balance;
+public SBIBank(int balance) {
+		super();
+		this.balance = balance;
+	}
+	public void withDraw(int amt)  {
+	try {
+		if(amt > this.balance) {
+			System.out.println("amt "+amt+" trying to withdraw...");
+			throw new InSufficientBalanceException("Balance is not enough");
+			
+		}
+		else {
+			System.out.println("successfully withdrawn amount...."+amt);
+			this.balance = this.balance - amt;
+		}
+	}catch(InSufficientBalanceException e) {
+		System.out.println("error occurred during with draw...");
+		e.printStackTrace();
+	}
+	}
+	public void deposit(int amt) {
+		try {
+			if(amt>50000) {
+				System.out.println("amt"+amt+"trying to deposit...");
+				throw new OutOfLimitException("Limit is excedeed --->");
+			}
+			else {
+				System.out.println("sucessfully deposited--->"+amt);
+				this.balance=this.balance+amt;
+			}catch(OutOfLimitException e1) {
+				System.out.println("error occured during deposit of Money-->");
+				e1.printStackTrace();
+			}
+		
+		}
+	}
+
+

@@ -1,0 +1,22 @@
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+     int n=100,d=0;
+     try {
+    	 System.out.println(n/d);
+     }catch(Exception a) {
+    	 System.out.println("Errot occured---->");
+    	 a.printStackTrace();
+     }try {
+    	 System.out.println(10/0);
+     }catch(Exception a){
+    	 System.out.println("error inside---->");
+    	 a.printStackTrace();
+     }
+     System.out.println(n/d);
+     System.out.println("hello");
+     System.out.println("hyd");
+	}
+
+}

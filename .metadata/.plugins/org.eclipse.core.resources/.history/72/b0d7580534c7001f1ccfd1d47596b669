@@ -1,0 +1,18 @@
+
+public class ExceptionDemo2 {
+
+	public static void main(String[] args) {
+     int[] num= {8,4,3};
+     for(int i=0;i<3;i++) {
+    	 
+     System.out.println(num[i]);
+     }try {
+    	 System.out.println(num[10]);
+     }catch(Exception e){
+    	 System.out.println("Error occured--->");
+     }
+     System.out.println("heloo my");
+     System.out.println("hyd");
+	}
+
+}

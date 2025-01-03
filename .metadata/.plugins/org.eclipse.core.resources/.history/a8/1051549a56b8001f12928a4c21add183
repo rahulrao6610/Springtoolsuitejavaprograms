@@ -1,0 +1,19 @@
+
+public class Pattern6 {
+//1 2 3 4
+// 2 3 4
+//  3 4
+//	 4
+//	3 4
+// 2 3 4
+//1 2 3 4	
+	public static void main(String[] args) {
+		for(int r=1;r<=4;r++) {
+			for(int c=1;c<=4;c++) {
+				System.out.println(c+"");
+				
+			}
+		}
+	}
+
+}

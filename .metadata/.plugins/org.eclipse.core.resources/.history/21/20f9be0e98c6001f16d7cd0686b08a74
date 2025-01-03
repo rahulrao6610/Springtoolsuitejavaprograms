@@ -1,0 +1,16 @@
+public class Seq{
+
+    public static void main(String[] args) {
+        long seq = 123456789l;
+        printseq(seq);
+    }
+
+	private static void printseq(long seq) {
+		if(seq!=0) {
+			System.out.println(seq);
+			seq=seq/10;
+			printseq(seq);
+		}
+		
+	}
+}
